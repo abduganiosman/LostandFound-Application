@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"
+            android:text="Welcome John Doe"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your items"
+            android:layout_below="@+id/profilename"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:id="@+id/yi"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyleview2"
+            android:layout_below="@+id/yi">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:weightSum="3"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/prologout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/profileemail"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_login_bk2"
+            android:layout_weight="1"
+            android:text="Logout"/>
+
+        <Button
+            android:id="@+id/proadd"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/profileemail"
+            android:background="@drawable/ic_login_bk2"
+            android:text="Add item"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/prohome"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/profileemail"
+            android:background="@drawable/ic_login_bk2"
+            android:text="home"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

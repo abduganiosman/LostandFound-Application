@@ -1,0 +1,169 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="85dp"
+    sothree:umanoShadowHeight="4dp"
+    sothree:umanoParallaxOffset="100dp"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoScrollableView="@+id/recyleview">
+
+    <!-- MAIN CONTENT -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map2"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MapsActivity"
+            android:layout_below="@+id/imageread"/>
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/searchBar"
+            sothree:mt_hint="E.g. Keys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/alertadd">
+
+
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="85dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_login_bk"
+                android:text="+"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="85dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_login_bk"
+                android:text="+"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="85dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_login_bk"
+                android:text="+"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/addentry"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn2"
+                android:text="+"
+                android:textColor="#000000"
+                android:layout_gravity="right"
+                android:layout_marginTop="120dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+
+            <Button
+                android:id="@+id/profilebtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn2"
+                android:drawableBottom="@drawable/ic_person_black_24dp"
+                android:textColor="#000000"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <!-- SLIDING LAYOUT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="false"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/dragView">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/sepbar"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/sepbar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Find your items"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/sepbar"
+                android:id="@+id/titlesome"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyleview"/>
+
+
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

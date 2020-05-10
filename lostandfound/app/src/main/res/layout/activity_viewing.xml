@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:map="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/map"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              android:layout_width="match_parent"
+              android:layout_height="150dp"
+              tools:context=".MapsActivity"
+              android:layout_below="@+id/imageread"/>
+
+      </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:id="@+id/ll1">
+
+            <ImageView
+                android:id="@+id/imageread"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"/>
+
+            <TextView
+                android:id="@+id/viewname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="Item Name"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/viewdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Description"/>
+
+            <TextView
+                android:id="@+id/viewdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Lost on 01/01/20"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/viewuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="By John Doe"
+                android:gravity="right" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll1"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:id="@+id/ll2">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textSize="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/b1"
+                    android:background="@drawable/ic_login_bk2"
+                    android:layout_width="600dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Email" />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/edit"
+                android:background="@drawable/ic_login_bk2"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:text="Edit" />
+
+            <Button
+                android:id="@+id/delete"
+                android:background="@drawable/ic_login_bk2"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/edit"
+                android:text="Delete" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">lostandfound</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_entry">Entry</string>
+    <string name="title_activity_viewing">Viewing</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_image_recog">ImageRecog</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_alerts">Alerts</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_homebeta">Map</string>
+    <string name="title_activity_flame">flame</string>
+</resources>
